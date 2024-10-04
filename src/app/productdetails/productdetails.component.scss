@@ -1,0 +1,44 @@
+.conteiner{
+    margin: 50px 0px;
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+
+    .image{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+       
+        h1{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            
+        }
+        img{
+            border-radius: 10px;
+            box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+            width: 500px;
+            width: 500px;
+        }
+    }
+    .full{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-self: center;
+        p{
+            font-size: 20px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+
+        }
+        button{
+            margin-top: 50px;
+        }
+    }
+}
+.form{
+    margin: auto;
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+ 
+}

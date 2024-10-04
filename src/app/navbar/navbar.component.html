@@ -1,0 +1,21 @@
+<nav class="navbar"  color="primary">
+    <div class="navbar1">
+    <div class="navchild">
+        <mat-icon (click)="toggleMenu()">{{ isShow ? 'close' : 'menu' }}</mat-icon>
+        <span routerLink="/">It Studio</span>
+    </div>
+    <div class="navchild2" [ngClass]="{'show-menu':isShow}" >
+        <a mat-flat-button routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" >Home</a>
+        <a mat-flat-button routerLink="/product"  routerLinkActive="active" >Products</a>
+        <a mat-flat-button routerLink="/aboutme"  routerLinkActive="active">About Me</a>
+        <a mat-flat-button routerLink="/contact"  routerLinkActive="active" >Contact</a>
+        <a mat-flat-button routerLink="/login"  routerLinkActive="active" class="login">LogIn In</a>
+    </div>
+    </div>
+</nav>
+<div class="categorytext"><span class="spancategory">Categories</span></div>
+<div class="conteiner">
+    <button
+    [routerLink]="['/product',item]"
+    mat-raised-button *ngFor="let item of categories">{{item}}</button>
+</div>

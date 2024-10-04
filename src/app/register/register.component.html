@@ -1,0 +1,33 @@
+<div class="conteiner5">
+        <h1>It Studio</h1>
+    <mat-form-field appearance="fill">
+        <mat-label for="id1">FullName</mat-label>
+        <input type="text" [(ngModel)]="register.fullname" matInput name="" id="id1">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label for="id2">Your Email</mat-label>
+        <input type="email" matInput [(ngModel)]="register.email" name="" id="id2">
+    </mat-form-field>
+    
+    <mat-form-field appearance="fill">
+        <mat-label for="id3">YourPhoneNumber</mat-label>
+        <input type="number" matInput [(ngModel)]="register.phone" name="" id="id3">
+    </mat-form-field> 
+    
+    <mat-form-field appearance="fill">
+        <mat-label for="id4">PersonNumber</mat-label>
+        <input type="number" matInput [(ngModel)]="register.personnumber" name="" id="id4">
+    </mat-form-field>
+
+     <mat-form-field appearance="fill">
+        <mat-label for="id5">UserName</mat-label>
+        <input type="text" matInput [(ngModel)]="register.username" name="" id="id5">
+    </mat-form-field>
+    
+    <mat-form-field appearance="fill">
+        <mat-label for="id6">YourPassword</mat-label>
+        <input type="password" matInput [(ngModel)]="register.password" name="" id="id6">
+    </mat-form-field>
+    <button mat-raised-button (click)="letsGo()">Register</button>
+</div>

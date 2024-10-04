@@ -1,0 +1,15 @@
+<div class="conteiner">
+    <div class="location">
+        <span class="info">Georgia : Tbilisi</span>
+        <span class="info">Samgori : Police Street 13</span>
+        <span class="info">PhoneNumber : 555649476</span>
+    </div>
+    <div class="shop">
+    <button mat-flat-button *ngFor="let item of category" 
+    [routerLink]="['/product',item]">{{item}}</button>
+    </div>
+    <div class="customer">
+        <button mat-flat-button>ContactUs</button>
+        <button mat-flat-button>AboutUs</button>
+    </div>
+</div>

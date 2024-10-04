@@ -1,0 +1,125 @@
+<div class="conteiner">
+    <div class="child">
+     <span>It Studio</span>
+</div>
+<div class="swiper">
+<swiper-container 
+autoplay-delay="3000"
+loop="true"
+speed="600"
+space-between="30"
+class="custom-swiper"
+>
+    <swiper-slide><img src="https://www.dexerto.com/cdn-image/wp-content/uploads/2024/01/16/Samsung-Galaxy-S24-Ultra-vs-iPhone-15-Pro-Max.jpg?width=1080&quality=75&format=auto" class="swiperimg" alt=""></swiper-slide>
+    <swiper-slide><img src="https://www.apple.com/newsroom/images/2024/09/apple-introduces-airpods-4/tile/Apple-AirPods-hero-240909-lp.jpg.landing-big_2x.jpg" class="swiperimg" alt=""></swiper-slide>
+    <swiper-slide><img src="https://cdn.mos.cms.futurecdn.net/f7fKFr7bZLCYqUrzgTFqcS.jpeg" class="swiperimg" alt=""></swiper-slide>
+  </swiper-container>
+</div>
+</div>
+
+
+<div class="card">
+    <div class="cardchild">
+        <div class="cdn-image">
+            <img src="https://cdn.images.express.co.uk/img/dynamic/59/1200x712/4956391.jpg" class="cardimg"  alt="">
+        </div>
+        <div class="text">
+            <span class="holidey">holidey deal</span>
+            <span class="upto">Up To 30% Off</span>
+            <span class="holidey">Selected Smartphone Brands</span>
+            <button mat-raised-button routerLink="/product">Shop</button>
+        </div>
+    </div>
+    <div class="cardchild">
+        <div class="cdn-image">
+            <img src="https://i.postimg.cc/DnjThxyW/Am-Yksxer6-Dqn-Gj-Xo-Wrf7-Zb-1.jpg" class="cardimg"  alt="">
+        </div>
+        <div class="text">
+            <span class="holidey">Just IN</span>
+            <span class="upto">Take Your Phone </span>
+            <span class="holidey">Top Smartphone Brands</span>
+            <button mat-raised-button routerLink="/product">Shop</button>
+        </div>
+    </div>
+</div>
+
+<div class="our">
+    <h1 >ჩვენი სერვისები</h1>
+</div>
+
+<div class="service">
+    <div class="serviceicon">
+        <mat-icon class="largeicon" >Home</mat-icon>
+        <span class="curb">მიტანის სერვისი</span>
+    </div>
+    <div class="serviceicon">
+        <mat-icon class="largeicon">work</mat-icon>
+        <span class="curb">ვმუშაობთ 24/7</span>
+    </div>
+    <div class="serviceicon">
+        <mat-icon class="largeicon">money</mat-icon>
+        <span class="curb">გარანტირებული დაბალი ფასები</span>
+    </div>
+    <div class="serviceicon">
+        <mat-icon class="largeicon">inventory</mat-icon>
+        <span class="curb">უფასო მიტანა 200ლარის ზემოთ</span>
+    </div>
+</div>
+
+<div class="sell">
+    <h1>Best Sellers</h1>
+</div>
+
+<swiper-container 
+slides-per-view="3"
+speed="500"
+loop="true"
+css-mode="true"
+navigation="true"
+pavigation="true"
+class="bestSeller"
+>
+    <swiper-slide
+    *ngFor="let data of bestSeller">
+    <div>
+     <span>{{data.title}}</span>
+     <img [src]="data.image" alt="">
+     <span>Price : {{data.price}}</span>
+     <button mat-button (click)="viewProduct(data)">Shop</button>
+    </div>
+</swiper-slide>
+  </swiper-container>
+  
+  <div class="BestSell"><span>On Sale</span></div>
+
+  <swiper-container 
+slides-per-view="3"
+speed="500"
+loop="true"
+css-mode="true"
+navigation="true"
+pavigation="true"
+autoplay-delay="1000"
+autoplay-disable-on-interaction="false" 
+autoplay-pause-on-mouse-enter="true"
+class="bestSeller"
+>
+    <swiper-slide
+    *ngFor="let data of bestSeller">
+    <div>
+     <span>{{data.title}}</span>
+     <img [src]="data.image" alt="">
+     <span class="price decoration">Old Price : 4000</span>
+     <span class="price">New Price : {{data.price}}</span>
+     <button mat-button (click)="viewProduct(data)">Shop</button>
+    </div>
+</swiper-slide>
+  </swiper-container>
+
+  <div class="BestSell"><span>Brand</span></div>
+
+  <div class="brandconteiner">
+    <div *ngFor="let image of brand">
+        <img [src]="image.img" alt="">
+    </div>
+  </div>

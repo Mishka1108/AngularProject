@@ -1,0 +1,14 @@
+<div class="conteiner4"><div class="conteiner9">
+    <h1>It Studio</h1>
+    <mat-form-field appearance="fill">
+        <mat-label for="id1">UserName</mat-label>
+        <input type="text" matInput [(ngModel)]="login.username" name="" id="id1">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label for="id1">YourPassword</mat-label>
+        <input type="password" [(ngModel)]="login.password" name="" matInput id="id2">
+    </mat-form-field>
+    <button mat-flat-button (click)="enter()">Enter</button>
+    <span>If you dont have accaunt <a routerLink="/register">Registracion</a> here</span>
+</div>
+</div>

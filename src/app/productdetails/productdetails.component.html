@@ -1,0 +1,46 @@
+<div *ngIf="hide">
+<div *ngIf="product" class="conteiner">
+  <div class="image">
+    <h1 class="title">{{ product.title }}</h1>
+    <img [src]="product.image  " alt="">
+  </div>
+  <div class="full">
+    <p>Category: {{ product.category }}</p>
+    <p>Price: {{ product.price }}</p>
+    <p>Release Date: {{ product.date }}</p>
+    <p>Seller: {{product.sell}}</p>
+    <button mat-flat-button (click)="show()">Buy</button>
+  </div>
+ 
+  </div>
+</div>
+
+
+
+  <div class="form" *ngIf="isShow">
+    <mat-form-field appearance="fill">
+      <mat-label for="id1">სახელი და გვარი</mat-label>
+      <input type="text"  matInput name="" [(ngModel)]="cardInfo.fullName" id="id1" required>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+    <mat-label for="id2">პირადი ნომერი</mat-label>
+    <input type="number" matInput name="" [(ngModel)]="cardInfo.personNumber" id="id2" required>
+    </mat-form-field>
+    
+      <mat-form-field appearance="fill">
+        <mat-label for="id3">პროდუცტის მიტანის ადგილი</mat-label>
+        <input type="text" matInput name="" [(ngModel)]="cardInfo.deliverAdres" id="id3" required>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label for="id5">ბარათის 16 ნიშნა ციფრი</mat-label>
+        <input type="number" matInput name="" [(ngModel)]="cardInfo.cardNumber" id="id5" required>
+      </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label for="id6">CV</mat-label>
+      <input type="number" matInput name="" [(ngModel)]="cardInfo.cardCv"  id="id6" required>
+    </mat-form-field>
+ 
+    <button mat-flat-button [disabled]="!fillValue()" (click)="buy()">დადასტურება</button>
+
+  </div>

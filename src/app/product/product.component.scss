@@ -1,0 +1,71 @@
+.main{
+   margin-top: 50px;
+   margin-bottom: 50px;
+   display: flex;
+gap: 15px;
+  .filter{
+    width: 300px;
+    
+    h1{
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        margin-left: 100px;
+    }
+    .fill{
+        margin-left: 5px;
+        display: flex;
+        flex-direction: column;
+    }
+    div{
+        button{
+            margin-left: 100px;
+        }
+    }
+  }
+  .image{
+    height: 300px;
+   width: 930px;
+   border-radius: 10px;
+    img{
+        width: 100%;
+        height: 335px;
+        border-radius: 10px;
+    }
+  }
+}
+
+.conteiner{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 250px;
+    border-radius: 2%;
+    background-color: rgb(241, 174, 241);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    margin: 1% 1% 1% 1%;
+    gap: 8px;
+    .title{
+        font-size: 20px;
+        margin-top: 5px;
+    }
+    img{
+        width: 220px;
+        height: 250px;
+        filter: drop-shadow(0 0 0.75rem crimson);
+        border-radius: 2%;
+    }
+    img:hover{
+        width: 250px;
+        height: 280px;
+        border-radius: 10%;
+        transition: 2s;
+    }
+    .buttons{
+        display: flex;
+        gap: 20px;
+        padding-bottom: 5px;
+    }
+}}

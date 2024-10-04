@@ -1,0 +1,50 @@
+.conteiner{
+    width: 98%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    align-items: center;
+
+    .cvimg{
+        img{
+            border-radius: 100%;
+            width: 250px;
+            height: 250px;
+        }
+    }
+    .aboutme{
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        h1{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        .textabout{
+           display: flex;
+           flex-direction: column;
+           gap: 20px;
+            span{
+                font-size: 25px;
+                
+            }
+            p{
+                width: 500px;
+            }
+        }
+    }
+    .skills{
+        display: flex;
+        gap: 10px;
+        span{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(24, 173, 184);
+            border-radius: 100%;
+            width: 100px;
+            height: 100px;
+        }
+    }
+
+}

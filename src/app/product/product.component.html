@@ -1,0 +1,47 @@
+<div class="main">
+   <div class="filter">
+      <h1>Filter</h1>
+      <mat-form-field appearance="fill" class="fill">
+         <mat-label for="id3">Search</mat-label>
+         <input class="matInput" [(ngModel)]="searchProduct" matInput id="id3" type="text" name="" >
+      </mat-form-field>
+   <mat-form-field appearance="fill" class="fill">
+      <mat-label for="id1">MinPrice</mat-label>
+      <input matInput type="number" class="matInput" [(ngModel)]="minPrice"  placeholder="Example:300" name="" id="id1">
+   </mat-form-field>
+   <mat-form-field appearance="fill" class="fill">
+      <mat-label for="id2">MaxPrice</mat-label>
+      <input matInput type="number" [(ngModel)]="maxPrice" class="matInput"  name="" id="id2" placeholder="Example:6000">
+   </mat-form-field>
+   <div>
+      <button mat-flat-button (click)="applyFilters()">Search</button>
+   </div>
+   </div>
+   <div class="image">
+      <swiper-container 
+      autoplay-delay="3000"
+      loop="true"
+      speed="600"
+      space-between="30"
+      class="custom-swiper"
+      >
+          <swiper-slide><img src="https://www.dexerto.com/cdn-image/wp-content/uploads/2024/01/16/Samsung-Galaxy-S24-Ultra-vs-iPhone-15-Pro-Max.jpg?width=1080&quality=75&format=auto" class="swiperimg" alt=""></swiper-slide>
+          <swiper-slide><img src="https://www.apple.com/newsroom/images/2024/09/apple-introduces-airpods-4/tile/Apple-AirPods-hero-240909-lp.jpg.landing-big_2x.jpg" class="swiperimg" alt=""></swiper-slide>
+          <swiper-slide><img src="https://cdn.mos.cms.futurecdn.net/f7fKFr7bZLCYqUrzgTFqcS.jpeg" class="swiperimg" alt=""></swiper-slide>
+        </swiper-container>
+   </div>
+</div>
+
+
+<div class="conteiner"><div class="card" *ngFor="let item of filterProduct">
+<span class="title">{{item.title}}</span>
+<img [src]="item.image" alt="">
+<span>ფასი : {{item.price}} </span>
+<span>გამოშვების წელი : {{item.date}} </span>
+<div class="buttons">
+   <button mat-raised-button>shop</button>
+   <button mat-raised-button (click)="viewFullDetails(item)" >სრულად ნახვა</button>
+</div>
+</div>
+</div>
+  
